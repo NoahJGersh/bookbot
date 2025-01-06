@@ -4,6 +4,7 @@ def main():
 def get_word_count(text):
     return len(text.split())
 
+# Find the counts of each unique character in the text
 def get_character_counts(text):
     lowercase = text.lower()
     character_counts = {}
@@ -20,14 +21,12 @@ def get_character_counts(text):
 def sort_on(dict):
     return dict["count"]
 
+# Produce a readable report of a given text file
 def generate_report(filepath):
     print(f"--- Begin report of {filepath} ---")
     
     with open(filepath) as f:
         file_contents = f.read()
-        # print(file_contents)
-        # print("Word count:", get_word_count(file_contents))
-        # print("Unique characters:", get_character_counts(file_contents))
 
         print(f"{get_word_count(file_contents)} words found in the document\n")
 
